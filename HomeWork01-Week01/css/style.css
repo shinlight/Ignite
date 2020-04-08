@@ -1,4 +1,7 @@
-/* font-family: 'Roboto', sans-serif; */
+body {
+  font-family: 'Roboto', sans-serif;
+  }
+
 input[type=text], textarea {
     width: 100%; 
     padding: 12px; 
