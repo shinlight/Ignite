@@ -1,4 +1,3 @@
-# Ignite
-Ignite Project
-Collection of homework done in April and May 2020 during the Ignite Project by Strive School.
-[ Student: Igor Bragato ]
+# Ignite Project
+Collection of <b>homework</b> done in April and May 2020 during the <b>Ignite Project</b> by Strive School.<br />
+Student: <b>Igor Bragato</b>
