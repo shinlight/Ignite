@@ -1,24 +1,47 @@
 body {
-    font-family: 'Roboto', sans-serif;
+    background: -webkit-linear-gradient(to bottom,#FFFFFF,lightblue);
+    background: linear-gradient(to bottom,#FFFFFF,lightblue); 
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 100%;
+    line-height: 150%;  /* gestisco l'interlinea del testo */
+    color: rgb(16, 72, 114);
     }
 
-h4 p {
-    color: red;
+h1 {
+    font-size: 2.4rem;
+    text-transform: uppercase;
+    text-align: center;
     }
+
+h2 {
+    font-size: 1.8rem;
+    }
+
+h3 {
+    font-size: 1.5rem;
+    }
+
+h4 {
+    font-size: 1.2rem;
+    }
+hr {
+    size: 1;
+}
 
 input[type=text], textarea {
     width: 100%; 
     padding: 12px; 
     border: 1px solid #ccc; 
-    border-radius: 5px; 
+    border-radius: 10px; 
     box-sizing: border-box; 
     margin-top: 6px;
     margin-bottom: 16px; 
-    resize: vertical
+    resize: vertical;
+    background-color: lightblue;
   }
   
-  input[type=submit] {
-    background-color: black;
+input[type=submit] {
+    background-color: rgb(16, 72, 114);
     color: white;
     padding: 12px 20px;
     border: none;
@@ -26,17 +49,54 @@ input[type=text], textarea {
     cursor: pointer;
   }
   
-  input[type=submit]:hover {
+input[type=submit]:hover {
     background-color: grey;
   }
-  
-  .container {
-    border-radius: 5px;
-    background-color: #f2f2f2;
+
+img {
+    border-radius: 30px;
+    border: 5px solid black;
+  } 
+
+/* CLASSES */
+
+.container {
+    border-radius: 10px;
+    background-color: #f2f2f2f0;
     padding: 20px;
   }
 
-  img {
-    border-radius: 40px;
-    border-color: solid black;
-  }
+.redfont {
+  color: red;
+}
+
+.redfont.centered {
+  color: red;
+  text-align: center;
+}
+
+.goldfont {
+  color: goldenrod;
+}
+
+p.footer {
+  text-align: center;
+  font-size: 0.7rem;
+  color: rgb(11, 32, 84);
+}
+
+div.image {
+  float:left;
+  display:block;
+  margin-right: 30px;
+  margin-top: 10px;
+}
+
+div.float {
+  float:left;
+  display:block;
+}
+
+.centered {
+  text-align: center;
+}
