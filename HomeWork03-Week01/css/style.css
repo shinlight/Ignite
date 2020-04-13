@@ -1,0 +1,152 @@
+/* Typrography */
+
+body{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 85%;
+    line-height: 140%;  /* gestisco l'interlinea del testo */
+    color: rgb(16, 72, 114);
+}
+
+a:any-link {
+    /* text-decoration: none; */
+    color: rgb(16, 72, 114);
+}
+
+h1 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 110%;
+    }
+
+h2 {
+    font-size: 1.5rem;
+    }
+
+h3 {
+    font-size: 1.2rem;
+}
+
+h4 {
+    font-size: 0.9rem;
+}
+
+hr {
+    size: 1;
+}
+
+/* Classes & Id */
+
+.inDiv p {
+    font-size: 0.9rem;
+    padding-left: -20px;
+}
+
+.inDiv ul {
+    list-style-type: none;
+}
+
+.inDiv h2 {
+    padding-left: 40px;
+}
+
+.inDivS h2 {
+    padding-left: 20px;
+}
+
+.inDivImg img {
+    border: 1px solid black;
+    border-radius: 15px;
+    /* max-width: 100%;
+    height: auto; */
+}
+
+/* .inDiv p {
+    text-align: center;
+} */
+
+#footer {
+    text-align: center;
+    font-size: 0.8rem;
+    line-height: 50%;
+}
+
+#box1 {
+    position: fixed;
+    object-position: center;
+    left:18px;
+    width:96.5%;
+    font-size: 0.8rem;
+    color: rgb(16, 72, 114);
+    background-color: rgb(219, 248, 255);
+    line-height: 150%;
+    border:1px solid rgb(16, 72, 114);
+    margin-bottom: 100px;
+    margin-top: -230px;
+}
+
+#box1 p {
+    padding: 20px;
+}
+
+#container{
+    background-color:gainsboro;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: flex-start; */
+    align-content: stretch;
+    /* min-width: 300px; */
+}
+
+.inDiv{
+    background-color: whitesmoke;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 15px;
+    /* max-width: 50%; */
+    min-width: 250px;
+    flex-grow: 2;
+    /* flex-shrink: 1; */
+    /* Igor: il flex-grow mi permette di gestire lo spazio tra gli item. Il valore 1 distribuisce equamente lo spazio. Assegno il valore 2 e causo un override, il div con valore 2 in questo caso occuperà lo spazio maggiore. */
+}
+
+.inDivImg{
+    background-color: whitesmoke;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 15px;
+    /* max-width: 50%; */
+    min-width: 250px;
+    /* flex-grow: 1; */
+    /* flex-shrink: 1; */
+    /* Igor: il flex-grow mi permette di gestire lo spazio tra gli item. Il valore 1 distribuisce equamente lo spazio. Assegno il valore 2 e causo un override, il div con valore 2 in questo caso occuperà lo spazio maggiore. */
+}
+
+.inDiv span {
+    padding-left: 40px;
+}
+
+.inDivS{
+    background-color: whitesmoke;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 15px;
+    flex-grow: 1; 
+
+}
+
+.rating > span:hover:before {
+    content: "\2605";
+    position: absolute;
+ }
+
+ #abs {
+    position: absolute;
+    top: 100px;
+    width: 200px;
+    height: 20px;
+    left: 350px;
+ }
