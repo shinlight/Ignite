@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- YOUR CSS SHOULD BE AFTER BOOSTRAPS' ONE -->
+
+    <title>Hello, world!</title>
+    <style>
+
+        h1 {
+               text-align: center;
+        }
+
+        @media (min-width: 578px) {
+            h1 {
+                color:red;
+                text-align: left;
+            }
+        }
+
+        @media (max-width: 500px) {
+            img{
+                display:none;
+            }
+        }
+
+        .container {
+            background-color: gainsboro;
+            border-right:1px solid gray;
+            border-left:1px solid gray;
+        }
+
+        #col1 {
+            background:green;
+        }
+
+        #col2{
+            background:honeydew;
+        }
+
+        #col3 {
+            background: indianred;
+        }
+
+        .row {
+            min-height: 500px;
+        }
+
+        img {
+            max-width: 100%;
+            padding:5px;
+            border-radius: 5px;
+        }
+
+        p{
+            text-align: center;
+            padding:5px;
+            margin:0px;
+        }
+
+        .main-cover {
+            position:relative;
+        }
+
+        .main-cover>p {
+            position: absolute;
+            text-align: center;
+            width: 100%;
+            display: none;
+            top: 50%;
+            background: white;
+        }
+
+        .main-cover:hover>p {
+            display:block;
+        }
+    </style>
+  </head>
+  <body>
+   
+    <div class="container">
+        <h1>Hello, world!</h1>
+
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="row">
+                    <div class="col">1</div>
+                    <div class="col">2</div>
+                    <div class="col">3</div>
+                    <div class="col">4</div>
+                    <div class="col">5</div>
+                    <div class="col">6</div>
+                    <div class="col">7</div>
+                    <div class="col">8</div>
+                    <div class="col">9</div>
+                    <div class="col">10</div>
+                    <div class="col">11</div>
+                    <div class="col">12</div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="main-cover">
+                    <img src="cover.jpg" />
+                    <p>Britney</p>
+                </div>
+            </div>
+        </div>
+
+       <div class="row"> 
+           <div class="col-6" id="col1">
+               Left column
+           </div>
+           <div class="col-3" id="col2">Right column 1</div>
+           <div class="col-3" id="col3">Right column 2</div>
+       </div>
+
+       <!-- 
+           We want to see 6 albums per row on PC
+           We want to scale them to 4 on tablet
+           And just 2 for mobile
+        -->
+        <div class="row">
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                <img src="cover.jpg" />
+                <p>Britney Spears</p>
+                <p>Oops I did it again</p>
+            </div>
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                <img src="cover.jpg" />
+                <p>Britney Spears</p>
+                <p>Oops I did it again</p>
+            </div>
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                <img src="cover.jpg" />
+                <p>Britney Spears</p>
+                <p>Oops I did it again</p>
+            </div>
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                <img src="cover.jpg" />
+                <p>Britney Spears</p>
+                <p>Oops I did it again</p>
+            </div>
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                <img src="cover.jpg" />
+                <p>Britney Spears</p>
+                <p>Oops I did it again</p>
+            </div>
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                <img src="cover.jpg" />
+                <p>Britney Spears</p>
+                <p>Oops I did it again</p>
+            </div>
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                <img src="cover.jpg" />
+                <p>Britney Spears</p>
+                <p>Oops I did it again</p>
+            </div>
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                <img src="cover.jpg" />
+                <p>Britney Spears</p>
+                <p>Oops I did it again</p>
+            </div>
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                <img src="cover.jpg" />
+                <p>Britney Spears</p>
+                <p>Oops I did it again</p>
+            </div>
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                <img src="cover.jpg" />
+                <p>Britney Spears</p>
+                <p>Oops I did it again</p>
+            </div>
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                <img src="cover.jpg" />
+                <p>Britney Spears</p>
+                <p>Oops I did it again</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>

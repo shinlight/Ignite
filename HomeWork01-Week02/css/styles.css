@@ -1,22 +1,54 @@
 /* EXTRA SELECTORS */
 
 /* select all p where the parent is a div */
-div>p {
+/* div>p {
     font-weight: bolder;
-}
+} */
 
 /* select all p placed immediately after a div */
-div+p {
+/* div+p {
     color: darkmagenta;
     background-color: yellow;
-}
+} */
 
 /* select all ul that are preceeded by a p element */
-ul~p {
+/* ul~p {
    font-size: 15px;
+} */
+
+/* p+p {
+    background-color: magenta;
 }
 
+p+ul {
+    background-color: green;
+} */
 
+/* a {
+   background-color: red;
+   color: whitesmoke;
+}
+
+[href^=https] {
+    background-color: green;
+    color: whitesmoke;
+}
+
+[href$=pdf] {
+    font-size: xx-large;
+}
+
+[title=test] {
+    background-color: grey;
+}
+
+[type="password"] {
+    background-color: honeydew;
+}
+
+[type="text"] {
+    background-color: yellow;
+} */
 
 /* MASTER AND INNER DIVS */
 
@@ -24,7 +56,8 @@ ul~p {
     display:flex;
     background: rgb(239,255,0);
     background: linear-gradient(90deg, rgba(239,255,0,0.8689047987616099) 49%, rgba(0,212,255,0) 100%);
-    
+    margin-bottom: 50px;
+    margin-top: 50px;
 }
 
 .innerDiv {
@@ -35,4 +68,48 @@ ul~p {
 .innerDiv p {
     color: darkblue;
     padding: 20px;
+}
+
+/* li::after{
+    content: "<";
+    border-right: solid red;
+    display: none;
+} */
+
+/* li:hover::after{
+    display: block;
+} */
+
+/* #masterDiv:hover {
+    box-shadow: 10px 10px 5px grey;
+}
+
+input[type=text]:focus {
+    box-shadow: 10px 10px 5px grey;
+} */
+
+/* retry the follow */
+
+li {
+    padding: 10px;
+    list-style-type: none;
+}
+
+ul {
+    border-left: 1px solid grey;
+    border-right: 1px solid grey;
+    padding: 20px;
+}
+
+ul:first-child {
+    border-top:1px solid gray;
+    border-radius: 15px;
+}
+
+ul:last-child {
+    border-radius: 15px;
+    border-bottom: 1px solid grey;
+}
+li:nth-child(2n+1) {
+    background-color:lightgray;
 }
