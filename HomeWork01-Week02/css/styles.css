@@ -1,0 +1,38 @@
+/* EXTRA SELECTORS */
+
+/* select all p where the parent is a div */
+div>p {
+    font-weight: bolder;
+}
+
+/* select all p placed immediately after a div */
+div+p {
+    color: darkmagenta;
+    background-color: yellow;
+}
+
+/* select all ul that are preceeded by a p element */
+ul~p {
+   font-size: 15px;
+}
+
+
+
+/* MASTER AND INNER DIVS */
+
+#masterDiv {
+    display:flex;
+    background: rgb(239,255,0);
+    background: linear-gradient(90deg, rgba(239,255,0,0.8689047987616099) 49%, rgba(0,212,255,0) 100%);
+    
+}
+
+.innerDiv {
+    flex-grow:1;
+    border: 1px solid darkblue;
+}
+
+.innerDiv p {
+    color: darkblue;
+    padding: 20px;
+}
