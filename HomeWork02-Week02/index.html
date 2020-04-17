@@ -1,21 +1,547 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>test</title>
-  </head>
-  <body>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-  </body>
+  <!-- Custom CSS -->
+  <style>
+    .container {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      padding: 10px;
+    }
+
+    .container-rounded{
+      border-radius: 15px;
+      border-top: 1px solid lightgray;
+      border-bottom: 1px solid lightgray;
+      border-left: 1px solid lightgray;
+      border-right: 1px solid lightgray;
+    }
+
+    .card-text-left {
+      text-align: left;
+    }
+
+    h1 {
+      margin: 20px;
+      text-align: center;
+
+    }
+
+    h2{
+      text-align: center;
+      text-transform:uppercase;
+    }
+
+    h5{
+      text-align: center;
+      text-transform:uppercase;
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+    p {
+      margin: 0;
+      text-align: center;
+    }
+
+    .latest-cover {
+      position:relative;
+    }
+
+    .latest-cover>p {
+        position: absolute;
+        text-align: center;
+        width: 100%;
+        display: none;
+        top: 50%;
+        background: white;
+    }
+
+    .latest-cover:hover>p {
+        display:block;
+    }
+  
+    .badge {
+    margin-bottom: 5px;
+    border: 20px;
+    }
+
+    .chart-pos {
+      text-align: center;
+      padding: 13px;
+      background-color: #F0F8FF;
+      margin: 0;
+    }
+
+    .col-mb {
+      margin-bottom: 10px;
+    }
+
+    footer{
+      margin-top: 50px;
+      border-top: lightgray;
+      border: 1px solid lightgray;
+    }
+
+    .latest-cover {
+        position: relative;
+    }
+    
+    .latest-cover:hover>i {
+        display: block;
+    }
+  
+    .latest-cover>i {
+        position: absolute;
+        text-align: center;
+        display: none;
+        left: 40%;
+        top: 45%;
+    }
+
+    .top10-cover {
+        position: relative;
+    }
+    
+    .top10-cover:hover>i {
+        display: block;
+    }
+  
+    .top10-cover>i {
+        position: absolute;
+        text-align: center;
+        display: none;
+        left: 43%;
+        top: 45%;
+    }
+
+
+    img:hover {
+    filter: blur(3px);
+    transition: .2s ease-in-out;
+    }
+    
+    img:hover>i {
+        display:block;
+    }
+
+    .btn {
+        margin-top: 10px;
+        
+
+    }
+
+
+  </style>
+
+  <title>Igor Bragato | Ranking of the Best Movies</title>
+</head>
+
+<body>
+  <!-- <div class="container">
+  <div class="alert alert-primary" role="alert">
+    <h4 class="alert-heading">Well done!</h4>
+    <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
+    <hr>
+    <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+  </div>
+</div> -->
+
+<!-- Navbar -->
+<nav class="navbar fixed-top navbar-light bg-light">
+  <a class="navbar-brand" href="#">
+    <img src="./images/logo-onstage.png" width="304" height="50" class="d-inline-block align-top" alt="OnStage">
+    &nbsp;
+  </a>
+  <form class="form-inline my-2 my-lg-0">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Search</button>
+  </form>
+</nav>
+<!-- End Navbar -->
+
+<!-- Slideshow -->
+  <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="./images/slideshow/slide-6under.jpg" class="d-block w-100" alt="6 Underground">
+      </div>
+      <div class="carousel-item">
+        <img src="./images/slideshow/slide-creed2.jpg" class="d-block w-100" alt="Creed II">
+      </div>
+      <div class="carousel-item">
+        <img src="./images/slideshow/slide-jw3.jpg" class="d-block w-100" alt="John Wick 3">
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+<!-- End Slideshow -->
+
+<!-- Latest Release -->
+  <div class="container">
+    <h2>Latest release</h2>
+    <div class="row">
+      <div class="col-lg-3 col-md-4 col-sm-12 col-mb">
+        <div class="card">
+          <div class="latest-cover">
+            <img src="./images/posters/6under.jpg" class="card-img-top" alt="...">
+            <i class="fa fa-play-circle fa-4x text-white"></i>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">6 Underground</h5>
+            <p><span class="badge badge-primary">Sky</span>&nbsp;<span class="badge badge-danger">Netflix</span>&nbsp;<span class="badge badge-info">Prime</span></p>
+            <p class="card-text-left">Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.</p>
+            <p>
+            <a href="#" class="btn btn-dark">Vai alla scheda</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4 col-sm-12 col-mb">
+        <div class="card">
+          <div class="latest-cover">
+          <img src="./images/posters/pets2.jpg" class="card-img-top" alt="...">
+          <i class="fa fa-play-circle fa-4x text-white"></i>
+        </div>
+          <div class="card-body">
+            <h5 class="card-title">Pets 2</h5>
+            <p><span class="badge badge-primary">Sky</span>&nbsp;<span class="badge badge-danger">Netflix</span>&nbsp;<span class="badge badge-info">Prime</span></p>
+              <p class="card-text-left">Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.</p>
+              <p>
+                <a href="#" class="btn btn-dark">Vai alla scheda</a>
+              </p>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4 col-sm-12 col-mb">
+        <div class="card">
+          <div class="latest-cover">
+          <img src="./images/posters/rambolb.jpg" class="card-img-top" alt="...">
+          <i class="fa fa-play-circle fa-4x text-white"></i>
+        </div>
+          <div class="card-body">
+            <h5 class="card-title">Rambo Last Blood</h5>
+            <p><span class="badge badge-primary">Sky</span>&nbsp;<span class="badge badge-danger">Netflix</span>&nbsp;<span class="badge badge-info">Prime</span></p>
+            <p class="card-text-left">Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt.</p>
+            <p>
+              <a href="#" class="btn btn-dark">Vai alla scheda</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4 col-sm-12 col-mb">
+        <div class="card">
+          <div class="latest-cover">
+          <img src="./images/posters/popeye.jpg" class="card-img-top" alt="...">
+          <i class="fa fa-play-circle fa-4x text-white"></i>
+        </div>
+          <div class="card-body">
+            <h5 class="card-title">Popeye</h5>
+            <p><span class="badge badge-primary">Sky</span>&nbsp;<span class="badge badge-danger">Netflix</span>&nbsp;<span class="badge badge-info">Prime</span></p>            
+            <p class="card-text-left">Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.</p>
+            <p>
+              <a href="#" class="btn btn-dark">Vai alla scheda</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4 col-sm-12 col-mb">
+        <div class="card">
+          <div class="latest-cover">
+          <img src="./images/posters/spidermanhc.jpg" class="card-img-top" alt="...">
+          <i class="fa fa-play-circle fa-4x text-white"></i>
+        </div>
+          <div class="card-body">
+            <h5 class="card-title">Spiderman Home Coming</h5>
+            <p><span class="badge badge-primary">Sky</span>&nbsp;<span class="badge badge-danger">Netflix</span>&nbsp;<span class="badge badge-info">Prime</span></p>            
+            <p class="card-text-left">Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt.</p>
+            <p>
+              <a href="#" class="btn btn-dark">Vai alla scheda</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4 col-sm-12 col-mb">
+        <div class="card">
+          <div class="latest-cover">
+          <img src="./images/posters/creed2.jpg" class="card-img-top" alt="...">
+          <i class="fa fa-play-circle fa-4x text-white"></i>
+        </div>
+          <div class="card-body">
+            <h5 class="card-title">Creed II</h5>
+            <p><span class="badge badge-primary">Sky</span>&nbsp;<span class="badge badge-danger">Netflix</span>&nbsp;<span class="badge badge-info">Prime</span></p>            
+            <p class="card-text-left">Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.</p>
+            <p>
+              <a href="#" class="btn btn-dark">Vai alla scheda</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4 col-sm-12 col-mb">
+        <div class="card">
+          <div class="latest-cover">
+          <img src="./images/posters/jumanjitnl.jpg" class="card-img-top" alt="...">
+          <i class="fa fa-play-circle fa-4x text-white"></i>
+        </div>
+          <div class="card-body">
+            <h5 class="card-title">Jumanji The Next Level</h5>
+            <p><span class="badge badge-primary">Sky</span>&nbsp;<span class="badge badge-danger">Netflix</span>&nbsp;<span class="badge badge-info">Prime</span></p>
+            <p class="card-text-left">Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt.</p>
+            <p>
+              <a href="#" class="btn btn-dark">Vai alla scheda</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4 col-sm-12 col-mb">
+        <div class="card">
+          <div class="latest-cover">
+          <img src="./images/posters/frozenll.jpg" class="card-img-top" alt="...">
+          <i class="fa fa-play-circle fa-4x text-white"></i>
+        </div>
+          <div class="card-body">
+            <h5 class="card-title">Frozen II</h5>
+            <p><span class="badge badge-primary">Sky</span>&nbsp;<span class="badge badge-danger">Netflix</span>&nbsp;<span class="badge badge-info">Prime</span></p>
+            <p class="card-text-left">Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.</p>
+            <p>
+              <a href="#" class="btn btn-dark">Vai alla scheda</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>  
+<!-- End Latest Release -->
+
+  <!-- Film Chart Top 10 -->
+  <div class="container container-rounded">
+    <h2>Film Chart Top 10</h2>
+    <div class="row">
+      <div class="col-lg-6 col-mb">
+        <div class="card badge-light">
+          <div class="card-header bg-light text-center">1</div>
+          <div class="top10-cover">
+          <img src="./images/posters/rocky.jpg" class="card-img-top" alt="...">
+          <i class="fa fa-play-circle fa-4x text-white"></i>
+        </div>
+          <div class="card-body">
+            <h5 class="card-title">Rocky</h5>
+            <p><span class="badge badge-primary">Sky</span>&nbsp;<span class="badge badge-danger">Netflix</span>&nbsp;<span class="badge badge-info">Prime</span></p>
+            <p class="card-text-left">Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.</p>
+            <p>
+              <a href="#" class="btn btn-dark">Vai alla scheda</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 col-mb">
+        <div class="card badge-light">
+          <div class="card-header bg-light text-center">2</div>
+          <div class="top10-cover">
+          <img src="./images/posters/dragon.jpg" class="card-img-top" alt="...">
+          <i class="fa fa-play-circle fa-4x text-white"></i>
+        </div>
+          <div class="card-body">
+            <h5 class="card-title">Dragon</h5>
+            <p><span class="badge badge-primary">Sky</span>&nbsp;<span class="badge badge-danger">Netflix</span>&nbsp;<span class="badge badge-info">Prime</span></p>
+            <p class="card-text-left">Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.</p>
+            <p>
+              <a href="#" class="btn btn-dark">Vai alla scheda</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 col-mb">
+        <div class="card badge-light">
+          <div class="card-header bg-light text-center">3</div>
+          <div class="top10-cover">
+          <img src="./images/posters/topgun.jpg" class="card-img-top" alt="...">
+          <i class="fa fa-play-circle fa-4x text-white"></i>
+        </div>
+          <div class="card-body">
+            <h5 class="card-title">Top Gun</h5>
+            <p><span class="badge badge-primary">Sky</span>&nbsp;<span class="badge badge-danger">Netflix</span>&nbsp;<span class="badge badge-info">Prime</span></p>
+            <p class="card-text-left">Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.</p>
+            <p>
+              <a href="#" class="btn btn-dark">Vai alla scheda</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 col-mb">
+        <div class="card badge-light">
+          <div class="card-header bg-light text-center">4</div>
+          <div class="top10-cover">
+          <img src="./images/posters/jerrymaguire.jpg" class="card-img-top" alt="...">
+          <i class="fa fa-play-circle fa-4x text-white"></i>
+        </div>
+          <div class="card-body">
+            <h5 class="card-title">Jerry Maguire</h5>
+            <p><span class="badge badge-primary">Sky</span>&nbsp;<span class="badge badge-danger">Netflix</span>&nbsp;<span class="badge badge-info">Prime</span></p>
+            <p class="card-text-left">Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.</p>
+            <p>
+              <a href="#" class="btn btn-dark">Vai alla scheda</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 col-mb">
+        <div class="card badge-light">
+          <div class="card-header bg-light text-center">5</div>
+          <div class="top10-cover">
+          <img src="./images/posters/kickboxer.jpg" class="card-img-top" alt="...">
+          <i class="fa fa-play-circle fa-4x text-white"></i>
+        </div>
+          <div class="card-body">
+            <h5 class="card-title">Kickboxer</h5>
+            <p><span class="badge badge-primary">Sky</span>&nbsp;<span class="badge badge-danger">Netflix</span>&nbsp;<span class="badge badge-info">Prime</span></p>
+            <p class="card-text-left">Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.</p>
+            <p>
+              <a href="#" class="btn btn-dark">Vai alla scheda</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 col-mb">
+        <div class="card badge-light">
+          <div class="card-header bg-light text-center">6</div>
+          <div class="top10-cover">
+          <img src="./images/posters/fandf.jpg" class="card-img-top" alt="...">
+          <i class="fa fa-play-circle fa-4x text-white"></i>
+        </div>
+          <div class="card-body">
+            <h5 class="card-title">The Fast and The Furious</h5>
+            <p><span class="badge badge-primary">Sky</span>&nbsp;<span class="badge badge-danger">Netflix</span>&nbsp;<span class="badge badge-info">Prime</span></p>
+            <p class="card-text-left">Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.</p>
+            <p>
+              <a href="#" class="btn btn-dark">Vai alla scheda</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 col-mb">
+        <div class="card badge-light">
+          <div class="card-header bg-light text-center">7</div>
+          <div class="top10-cover">
+          <img src="./images/posters/rockybalboa.jpg" class="card-img-top" alt="...">
+          <i class="fa fa-play-circle fa-4x"></i>
+        </div>
+          <div class="card-body">
+            <h5 class="card-title">Rocky Balboa</h5>
+            <p><span class="badge badge-primary">Sky</span>&nbsp;<span class="badge badge-danger">Netflix</span>&nbsp;<span class="badge badge-info">Prime</span></p>
+            <p class="card-text-left">Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.</p>
+            <p>
+              <a href="#" class="btn btn-dark">Vai alla scheda</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 col-mb">
+        <div class="card badge-light">
+          <div class="card-header bg-light text-center">8</div>
+          <div class="top10-cover">
+          <img src="./images/posters/thematrix.jpg" class="card-img-top" alt="...">
+          <i class="fa fa-play-circle fa-4x text-white"></i>
+        </div>
+          <div class="card-body">
+            <h5 class="card-title">The Matrix</h5>
+            <p><span class="badge badge-primary">Sky</span>&nbsp;<span class="badge badge-danger">Netflix</span>&nbsp;<span class="badge badge-info">Prime</span></p>
+            <p class="card-text-left">Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.</p>
+            <p>
+              <a href="#" class="btn btn-dark">Vai alla scheda</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 col-mb">
+        <div class="card badge-light">
+          <div class="card-header bg-light text-center">9</div>
+          <div class="top10-cover">
+          <img src="./images/posters/300.jpg" class="card-img-top" alt="...">
+          <i class="fa fa-play-circle fa-4x text-white"></i>
+        </div>
+          <div class="card-body">
+            <h5 class="card-title">300</h5>
+            <p><span class="badge badge-primary">Sky</span>&nbsp;<span class="badge badge-danger">Netflix</span>&nbsp;<span class="badge badge-info">Prime</span></p>
+            <p class="card-text-left">Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.</p>
+            <p>
+              <a href="#" class="btn btn-dark">Vai alla scheda</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 col-mb">
+        <div class="card badge-light">
+          <div class="card-header bg-light text-center">10</div>
+          <div class="top10-cover">
+          <img src="./images/posters/creed.jpg" class="card-img-top" alt="...">
+          <i class="fa fa-play-circle fa-4x text-white"></i>
+        </div>
+          <div class="card-body">
+            <h5 class="card-title">Creed</h5>
+            <p><span class="badge badge-primary">Sky</span>&nbsp;<span class="badge badge-danger">Netflix</span>&nbsp;<span class="badge badge-info">Prime</span></p>
+            <p class="card-text-left">Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.</p>
+            <p>
+              <a href="#" class="btn btn-dark">Vai alla scheda</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Film Chart Top 10 -->
+
+  <!-- Footer -->
+  <footer class="page-footer font-small blue bg-light">
+    <div class="container container-footer">
+      <p class="float-right">
+        <a href="#top">Back to top</a>
+      </p>
+      This is a homework for Ignite Course (Hosted by Strive School)
+      <p>
+      <p>
+      </p>
+      created by student Igor Bragato on April 15, 2020
+      </p>
+    </div>
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2020 Copyright Igor Bragato
+      <a href="#"> igorbragato.com</a>
+    </div>
+    <!-- End Copyright -->
+  </footer>
+    <!-- End Footer -->
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+</body>
+
 </html>
