@@ -18,6 +18,18 @@
       padding: 10px;
     }
 
+    .container- {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      padding: 10px;
+    }
+
+    .container-fluid {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      padding: 10px;
+    }
+
     .container-rounded{
       border-radius: 15px;
       border-top: 1px solid lightgray;
@@ -125,8 +137,7 @@
       left: 43%;
       top: 45%;
     }
-
-
+    
     img:hover {
       filter: blur(3px);
       transition: .2s ease-in-out;
@@ -153,8 +164,15 @@
       text-align: left;   
     }
 
-    #btn-center {
-
+    .carousel-nav-icon {
+      height: 48px;
+      width: 48px;
+    }
+    .carousel-item .col, .col-sm, .col-md {
+      margin: 8px;
+      height: 270px;
+      background-size: cover;
+      background-position: center center;
     }
   </style>
 
@@ -162,17 +180,13 @@
 </head>
 
 <body>
-  <!-- <div class="container">
-  <div class="alert alert-primary" role="alert">
-    <h4 class="alert-heading">Well done!</h4>
-    <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
-    <hr>
-    <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
-  </div>
-</div> -->
 
 <div class="container-fluid">
-
+  <!-- Top Alert -->
+  <div class="alert alert-danger" role="alert">
+    Due #Coronavirus ...Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua!
+  </div>
+   <!-- End Top Alert -->
   <!-- Navbar -->
   <nav class="navbar navbar-light bg-light">
     <a class="navbar-brand" href="#">
@@ -223,7 +237,6 @@
   <!-- End Slideshow -->
 
   <!-- Jumbotron -->
-
   <div class="jumbotron">
     <h1 class="display-2">Welcome to <b>OnStage</b>!</h1>
     <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.</p>
@@ -239,6 +252,69 @@
   </div>
   <!-- End Jumbotron -->
 
+</div>
+  <!-- Top10-Carousel -->
+  <div class="my-5 text-center container">
+    <h2>Top 10</h2>
+    <div class="row d-flex align-items-center">
+      <div class="col-1 d-flex align-items-center justify-content-center">
+          <a href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <div class="carousel-nav-icon">
+              <i class="fa fa-chevron-left fa-4x" aria-hidden="true"></i>
+            </div>
+          </a>
+      </div>
+      <div class="col-10">
+          <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="row">
+                      <div style="background-image:url('./images/posters/rocky.jpg');" class="col-12 col-md d-flex align-items-center justify-content-center">
+                      </div>
+                      <div style="background-image:url('./images/posters/dragon.jpg');" class="col-12 col-md d-flex align-items-center justify-content-center">
+                      </div>
+                      <div style="background-image:url('./images/posters/topgun.jpg');" class="col-12 col-md d-flex align-items-center justify-content-center">
+                      </div>
+                      <div style="background-image:url('./images/posters/jerrymaguire.jpg');" class="col-12 col-md d-flex align-items-center justify-content-center" class="col-12 col-md d-flex align-items-center justify-content-center">
+                      </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="row">
+                      <div style="background-image:url('./images/posters/kickboxer.jpg');" class="col-12 col-md d-flex align-items-center justify-content-center">
+                      </div>
+                      <div style="background-image:url('./images/posters/fandf.jpg');" class="col-12 col-md d-flex align-items-center justify-content-center">
+                      </div>
+                      <div style="background-image:url('./images/posters/rockybalboa.jpg');" class="col-12 col-md d-flex align-items-center justify-content-center">
+                      </div>
+                      <div style="background-image:url('./images/posters/thematrix.jpg');" class="col-12 col-md d-flex align-items-center justify-content-center" class="col-12 col-md d-flex align-items-center justify-content-center">
+                      </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="row">
+                    <div style="background-image:url('./images/posters/300.jpg');" class="col-12 col-md d-flex align-items-center justify-content-center">
+                    </div>
+                    <div style="background-image:url('./images/posters/creed.jpg');" class="col-12 col-md d-flex align-items-center justify-content-center">
+                    </div>
+                    <div style="background-image:url('./images/posters/creed.jpg');" class="col-12 col-md d-flex align-items-center justify-content-center">
+                    </div>
+                    <div style="background-image:url('./images/posters/creed.jpg');" class="col-12 col-md d-flex align-items-center justify-content-center" class="col-12 col-md d-flex align-items-center justify-content-center">
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+      </div>
+      <div class="col-1 d-flex align-items-center justify-content-center"><a  href="#carouselExampleIndicators" data-slide="next">
+          <div class="carousel-nav-icon">
+            <i class="fa fa-chevron-right fa-4x" aria-hidden="true"></i>
+          </div>
+          </a>
+      </div>
+    </div>
+<!--End Top10-Carousel-->
 </div>
 
 <!-- Latest Release -->
@@ -517,7 +593,7 @@
         </div>
           <div class="card-body">
             <h5 class="card-title">Top Gun</h5>
-                        <p><span class="badge badge-primary">Romance</span>&nbsp;
+              <p><span class="badge badge-primary">Romance</span>&nbsp;
                 <span class="badge badge-danger">Thriller</span>&nbsp;
                 <span class="badge badge-info">Animation</span>&nbsp;
                 <span class="badge badge-warning">Action</span>&nbsp;
@@ -716,6 +792,11 @@
     <!-- End Copyright -->
   </footer>
     <!-- End Footer -->
+
+
+    
+
+
 
   </div>
 </div>
