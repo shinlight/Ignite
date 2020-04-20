@@ -1,7 +1,7 @@
 body{
     font-family: 'Ubuntu', sans-serif;
     font-size: 85%;
-    line-height: 140%;  /* gestisco l'interlinea del testo */
+    line-height: 140%;  
     color: rgb(16, 72, 114);
     background-color: white;
 }
@@ -25,10 +25,35 @@ h4 {
     font-size: medium;
     font-weight: bolder;
 }
+
 p {
     margin-block-start: 0;
     margin-block-end: 0;
 }
+
+#timestamp { 
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0s linear;
+    position: absolute;
+    bottom: -20px;
+    left: 15px;
+    color: black;
+    padding: 0;
+    margin: o;
+    font-size: 75%;
+}
+
+.tm-right {
+    left: 400px;
+    bottom: -20px;  
+}
+
+.balloon:hover > #timestamp {
+    visibility: visible;
+    opacity: 1;
+}
+
 
 .footer {
     margin-top: 30px;
@@ -49,23 +74,17 @@ p {
 .container {
     border-radius: 20px;
     border-color: 1px solid grey;
+    background-color: ghostwhite;
     border-top: 1px;
     padding-right: 20px;
     padding-left: 20px;
     padding-top: 0;
     padding-bottom: 0;
-    background-color: ghostwhite;
     max-width: 615px;
     position: relative;
     text-align: center;
     display: inline-block; 
     width: 100%;
-    text-align: center;
-
-}
-
-.timestap {
-    
 }
 
 .balloon {
@@ -120,7 +139,6 @@ p {
     width: 80px;
     height: 80px;
     border-radius: 50%;
-
 }
 
 .picture-right img {
@@ -133,7 +151,7 @@ p {
 .circle-left {
     position: absolute;
     left: -125px;
-    bottom: 43px;
+    bottom: 25px;
     width: 90px;
     height: 90px;
     border-radius: 50%;
@@ -143,7 +161,7 @@ p {
 .picture-left {
     position: absolute;
     left: -119px;
-    bottom: 47px;
+    bottom: 29px;
     width: 80px;
     height: 80px;
     border-radius: 50%;
