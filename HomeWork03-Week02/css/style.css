@@ -1,0 +1,6 @@
+body{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 85%;
+    line-height: 140%;  /* gestisco l'interlinea del testo */
+    color: rgb(16, 72, 114);
+}
