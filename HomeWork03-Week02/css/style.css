@@ -3,4 +3,167 @@ body{
     font-size: 85%;
     line-height: 140%;  /* gestisco l'interlinea del testo */
     color: rgb(16, 72, 114);
+    background-color: white;
+}
+
+h1, h2, h3 {
+    text-align: center;
+    line-height: 50%;
+}
+
+h1 {
+    color: rgb(255, 0, 174);
+    text-transform: uppercase;
+}
+
+h4 {
+    line-height: 0;
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 15px;
+    font-size: medium;
+    font-weight: bolder;
+}
+p {
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+.footer {
+    margin-top: 30px;
+    font-size: 90%;
+}
+
+.footer a {
+    color: rgb(255, 0, 174);
+}
+
+.hidden-cont {
+    width: 100%;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.container {
+    border-radius: 20px;
+    border-color: 1px solid grey;
+    border-top: 1px;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 0;
+    padding-bottom: 0;
+    background-color: ghostwhite;
+    max-width: 615px;
+    position: relative;
+    text-align: center;
+    display: inline-block; 
+    width: 100%;
+    text-align: center;
+
+}
+
+.timestap {
+    
+}
+
+.balloon {
+    background-color: DodgerBlue;
+    padding: 20px;
+    margin-top: 35px;
+    margin-bottom: 35px;
+    color: whitesmoke;
+    border-radius: 10px;
+    text-align: left;
+    max-width: 450px;
+    position: relative;
+}
+
+#right {
+    left: 124px;
+}
+
+#pink {
+    background-color: rgb(255, 0, 174);
+}
+
+#yellowgreen {
+    background-color: yellowgreen;
+}
+
+.triangle-right {
+    position: absolute;
+    left: 487px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 20px 0 20px 30px;
+    border-color: transparent transparent transparent DodgerBlue;
+
+}
+
+.circle-right {
+    position: absolute;
+    right: -125px;
+    bottom: 40px;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+
+}
+
+.picture-right {
+    position: absolute;
+    right: -122px;
+    bottom: 43px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+
+}
+
+.picture-right img {
+    width: 77px;
+    height: 77px;
+    border-radius: 50%;
+
+}
+
+.circle-left {
+    position: absolute;
+    left: -125px;
+    bottom: 43px;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+
+}
+
+.picture-left {
+    position: absolute;
+    left: -119px;
+    bottom: 47px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+
+}
+
+.picture-left img {
+    width: 77px;
+    height: 77px;
+    border-radius: 50%;
+
+}
+
+.triangle-left {
+    position: absolute;
+    left: -30px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 20px 30px 20px 0;
+    border-color: transparent DodgerBlue transparent transparent;
+
 }
