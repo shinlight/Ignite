@@ -1,6 +1,65 @@
 body{
+    margin-top: 50px;
     font-family: 'Ubuntu', sans-serif;
     font-size: 85%;
-    line-height: 140%;  /* gestisco l'interlinea del testo */
+    line-height: 140%;  
     color: rgb(16, 72, 114);
+    background-color: white;
+}
+
+h1, h2, h3 {
+    text-align: center;
+    line-height: 120%;
+}
+
+h4 {
+    /* text-align: center; */
+    line-height: 130%;
+    margin-bottom: 20px;
+    /* text-transform: uppercase; */
+}
+
+h1 {
+    color: rgb(255, 0, 174);
+    text-transform: uppercase;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+    margin-top: 50px;;
+    padding: 20px;
+    background-color: gainsboro;
+    border-radius: 10px;
+    border: 1px solid lightgrey;
+}
+
+.item {
+    flex-grow: 1;
+    padding: 20px;
+    margin: 10px;;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    border: 1px solid lightgrey;
+    width: 400px;
+}
+
+.btn {
+    margin-bottom: 10px;
+}
+
+pre {
+    background-color: lightpink;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid lightcoral;
+    font-weight: bolder;
+}
+
+.footer {
+    margin-top: 30px;
+    line-height: 0;
+    text-align: center;
 }
