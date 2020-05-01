@@ -1,9 +1,56 @@
-body{
-    margin-top: 50px;
+body {
     font-family: 'Ubuntu', sans-serif;
     font-size: 85%;
     line-height: 140%;  
-    color: rgb(16, 72, 114);
     background-color: white;
 }
 
+.h1 {
+    color: #28a745;
+}
+
+.navbar {
+    /* padding-top: 50px; */
+}
+
+.btn {
+    /* margin-top: 50px; */
+}
+
+/* .nav-link {
+    padding-top: 1.3rem!important;
+} */
+
+body label {
+    color: #28a745!important;
+}
+
+#sideBar {
+    padding: 0 15px 15px 15px;
+}
+
+
+#sideBar img {
+   width: 350px;
+}
+
+.fa {
+    color: #28a745;
+}
+
+legend {
+    color: #28a745;
+}
+
+.form-control:focus {
+    border-color: #28a745;
+    box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
+} 
+
+/* .form-group .row {
+    padding-top: 20px;
+} */
+
+.form-inline {
+    margin-bottom: 10px;
+}
