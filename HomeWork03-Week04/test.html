@@ -1,0 +1,31 @@
+  
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="name" placeholder="name">
+    <input type="text" id="specialRequests" placeholder="special requests">
+    <input type="text" id="phone" placeholder="phone">
+    <input type="number" id="numberOfPersons">
+    <input type="checkbox" id="smoking">
+    <input type="datetime-local" id="dateTime">
+
+    <input type="button" onclick="sendReservation()" value="send"/>
+
+    <ul id="reservations"></ul>
+
+<!-- script -->
+<script src="test.js"></script>
+<script>
+    window.onload = async () => {
+    await loadReservations()
+}
+</script>
+</body>
+</html>

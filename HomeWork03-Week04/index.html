@@ -87,13 +87,13 @@
                 <form name="reservationForm">
                     <input type="hidden" value="" id="current-reservation" />
                     <div class="form-group row">
-                      <label for="inputEmail3" class="col-sm-2 col-form-label">Name</label>
+                      <label for="name" class="col-sm-2 col-form-label">Name</label>
                       <div class="col-sm-10">
                         <input type="text" class="form-control" id="name">
                       </div>
                     </div>
                     <div class="form-group row">
-                      <label for="inputPassword3" class="col-sm-2 col-form-label">Phone</label>
+                      <label for="phone" class="col-sm-2 col-form-label">Phone</label>
                       <div class="col-sm-10">
                         <input type="text" class="form-control" id="phone">
                       </div>
@@ -108,8 +108,8 @@
                         </div>
                       </div>
                       <div class="form-group">
-                        <label for="exampleFormControlSelect1">Number of Guests</label>
-                        <select class="form-control" id="guests">
+                        <label for="guests">Number of Guests</label>
+                        <select class="form-control" id="numberOfPersons">
                           <option>1</option>
                           <option>2</option>
                           <option>3</option>
@@ -125,11 +125,11 @@
                         </select>
                       </div>
                       <div class="form-inline">
-                        <label for="date">Date&nbsp;</label><input type="date" class="form-control" id="dateTime" placeholder="">
+                        <label for="date">Date&nbsp;</label><input type="datetime-local" class="form-control" id="dateTime" placeholder="">
                       </div>
                       <div class="form-group">
                         <label for="exampleFormControlTextarea1">Special Requests</label>
-                        <textarea class="form-control" id="message" rows="3"></textarea>
+                        <textarea class="form-control" id="specialRequests" rows="3"></textarea>
                       </div>
                     </fieldset>
                     <div class="form-group row">
@@ -219,6 +219,10 @@
 
             await loadReservations()
         }
+
+        // window.onload = async () => {
+        //     await loadReservations()
+        // }
     </script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>

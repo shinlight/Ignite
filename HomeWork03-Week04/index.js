@@ -6,15 +6,15 @@ async function createReservation() {
     let reservation = {
         name: document.querySelector("#name").value,
         phone: document.querySelector("#phone").value,
-        smoking: document.querySelector("#smoking").value,
-        guests: document.querySelector("#guests").value,
+        smoking: document.querySelector("#smoking").checked,
+        numberOfPersons: document.querySelector("#numberOfPersons").value,
         dateTime: document.querySelector("#dateTime").value,
-        message: document.querySelector("#message").value,
+        specialRequests: document.querySelector("#specialRequests").value,
     }
 
     let response;
 
-    let id = document.querySelector("#current-event").value;
+    let id = document.querySelector("#current-reservation").value;
     if (id){ //if we have an id, we update
         //PUT to update the info
         response = await fetch(url +"/" +id, { // https://striveschool.herokuapp.com/api/reservation/{id}
@@ -39,17 +39,15 @@ async function createReservation() {
     if (response.ok){
         let responseJson = await response.json()
         await loadReservations()
-        //document.querySelector("#current-events").innerHTML += `<li class="list-group-item">${myEvent.time}: ${myEvent.name} - ${myEvent.price}€</li>`
-
         console.log("Created!", responseJson)
         document.querySelector("#name").value = ""
         document.querySelector("#phone").value = ""
-        document.querySelector("#smoking").value = 0
-        document.querySelector("#guests").value = ""
-        document.querySelector("#message").value = ""
+        document.querySelector("#smoking").checked = ""
+        document.querySelector("#numberOfPersons").value = 0
+        document.querySelector("#specialRequests").value = ""
         document.querySelector("#dateTime").value = dateTime
-        document.querySelector("#create-button").value = "Create event"
-        document.querySelector("#current-event").value = ""
+        document.querySelector("#create-button").value = ""
+        document.querySelector("#current-reservations").value = ""
     }
     else{
         console.log("Error")
@@ -99,10 +97,10 @@ async function deleteReservation(reservation){
 async function editReservation(reservation){
     document.querySelector("#name").value = reservation.name
     document.querySelector("#phone").value = reservation.phone
-    document.querySelector("#smoking").value = reservation.smoking
-    document.querySelector("#guests").value = reservation.guests
-    document.querySelector("#message").value = reservation.date
-    document.querySelector("#dateTime").value = reservation.data
+    document.querySelector("#smoking").checked = reservation.smoking
+    document.querySelector("#numberOfPersons").value = reservation.numberOfPersons
+    document.querySelector("#specialRequests").value = reservation.specialRequests
+    document.querySelector("#dateTime").value = reservation.dateTime
     document.querySelector("#current-reservation").value = reservation._id
     document.querySelector("#create-button").value = "Update reservation"
 }
